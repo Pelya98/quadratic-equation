@@ -18,8 +18,12 @@ module.exports = function solveEquation(equation){
         x2 = (+(Urav[4]) - squear) / (2 * Urav[0]);
     else
         x2 = (+(-Urav[4]) - squear) / (2 * Urav[0]);
-
-    result.push(x1,x2);
+    x1=Math.round(x1);
+    x2=Math.round(x2);
+    if(x1>x2)
+    result.push(x2,x1);
+    else
+        result.push(x1,x2);
     return result;
 }
 
